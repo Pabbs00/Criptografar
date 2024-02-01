@@ -1,4 +1,4 @@
-from termcolor import colored
+import termcolor 
 import os
 from menu import erro
 
@@ -14,7 +14,7 @@ def criptografar(mensagem):
     for letras in alfabeto:
       mensagem = mensagem.replace(letras,chave[int(alfabeto.index(letras))])
   else:
-    print(f"Mensagem criptografada:",colored(mensagem,"red"))
+    print(f"Mensagem criptografada:",termcolor.colored(mensagem,"red"))
     return mensagem
 
 def descript(mensagem=str):
@@ -22,7 +22,7 @@ def descript(mensagem=str):
     if letra in chave:
        mensagem = mensagem.replace(letra,alfabeto[int(chave.index(letra))])
     else:
-      print("Mensagem descriptada:",colored(mensagem,"green"))
+      print("Mensagem descriptada:",termcolor.colored(mensagem,"green"))
       return mensagem
 
 #verifcação de sistema para limpar a tela

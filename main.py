@@ -3,6 +3,7 @@ from menu import tela, linha, encerrar, tela2, tela3, erro
 
 #execução
 def iniciar():
+  limpar()
   var = True
   while var == True:
     tela()
